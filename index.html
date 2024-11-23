@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNDTEC Broker Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-container" class="container">
+        <h2>FundTec Broker Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="login-btn">Login</button>
+        </form>
+        <nav>
+            <ul>
+                <li class="brand"><img src="FundTeclogo.png" alt = "FundTec"></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Broker Portal -->
+    <div id="portal-container" class="container hidden">
+        <h2>Broker Portal</h2>
+        <div class="features">
+            <button onclick="showInvestorManagement()">Investor Management</button>
+            <button onclick="showTransactionDetails()">Transaction Details</button>
+        </div>
+
+        <!-- Investor Management -->
+        <div id="investor-management" class="section hidden">
+            <h3>Investor Management</h3>
+            <ul id="investor-list">
+                <li>Investor 1</li>
+                <li>Investor 2</li>
+                <li>Investor 3</li>
+            </ul>
+        </div>
+
+        <!-- Transaction Details -->
+        <div id="transaction-details" class="section hidden">
+            <h3>Transaction Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Investor</th>
+                        <th>Transaction Type</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Investor 1</td>
+                        <td>Investment</td>
+                        <td>$1000</td>
+                        <td>2024-11-20</td>
+                    </tr>
+                    <tr>
+                        <td>Investor 2</td>
+                        <td>Withdrawal</td>
+                        <td>$500</td>
+                        <td>2024-11-21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
